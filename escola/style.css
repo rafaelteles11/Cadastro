@@ -1,0 +1,214 @@
+/* Reset básico para garantir consistência entre navegadores */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos globais */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left; /* Alinha tudo à esquerda */
+}
+
+/* Navbar */
+.navbar {
+    background-color: #4CAF50;
+    padding: 10px 0;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: flex-start; /* Alinha tudo à esquerda */
+    align-items: center;
+}
+
+.logo {
+    color: black;
+    font-size: 1.8em;
+    font-weight: bold;
+    margin-right: 30px; /* Adiciona espaçamento entre logo e links */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #cce7cc;
+}
+
+/* Estilos do formulário */
+.form-cadastro, .form-pesquisa {
+    margin-bottom: 20px;
+    background-color: #f1f1f1;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+}
+
+input[type="text"], input[type="number"], input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    text-align: left; /* Alinha texto dentro do input à esquerda */
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: purple;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: left; /* Alinha o texto do botão à esquerda */
+}
+
+button:hover {
+    background-color: purple;
+}
+
+/* Estilos da tabela */
+.table-alunos {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    text-align: left; /* Alinha o conteúdo das células à esquerda */
+}
+
+.table-alunos th, .table-alunos td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.table-alunos th {
+    background-color: purple;
+    color: white;
+    text-transform: uppercase;
+    text-align: left; /* Alinha cabeçalhos à esquerda */
+}
+
+.table-alunos tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.table-alunos tr:hover {
+    background-color: #f1f1f1;
+}
+
+.btn-delete {
+    display: inline-block;
+    padding: 8px 12px;
+    background-color: #ff4d4d;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    text-align: left; /* Alinha o texto do botão à esquerda */
+}
+
+.btn-delete:hover {
+    background-color: #ff3333;
+}
+
+/* Footer */
+.footer {
+    background-color: #4CAF50;
+    padding: 20px 0;
+    color: white;
+    text-align: left; /* Alinha conteúdo do rodapé à esquerda */
+    margin-top: 40px;
+}
+
+.footer p {
+    color: black;
+    margin-bottom: 10px;
+}
+
+.footer-links {
+    list-style: none;
+    display: flex;
+    justify-content: flex-start; /* Alinha os links do rodapé à esquerda */
+    gap: 20px;
+}
+
+.footer-links a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 1em;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #cce7cc;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .table-alunos th, .table-alunos td {
+        font-size: 0.9em;
+    }
+
+    h1 {
+        font-size: 1.5em;
+        text-align: left; /* Alinha o título à esquerda */
+    }
+
+    input[type="text"], input[type="number"], input[type="email"], button {
+        font-size: 1em;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: flex-start; /* Alinha os links da navbar à esquerda */
+    }
+
+    .nav-links li {
+        margin-bottom: 10px;
+    }
+}
+
+
+/* Alinhamento geral para os botões */
+.btn-edit svg, .btn-delete {
+    vertical-align: middle;
+}
